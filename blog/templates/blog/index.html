@@ -8,32 +8,34 @@ Blog
 <link rel="stylesheet" href="{% static 'blog/index.css' %}">
 {% endblock %}
 {% block page_content %}
-    <header>
-    <h1><a href="">Masouds Blog</a></h1>
-        <nav>
-            <a href="">All Posts</a>
+    <header id="main-navigation">
+    <nav>
+            <a href="">همه ی پست ها</a>
         </nav>
+    <h1><a href="">وبلاگ مسعود</a></h1>
+
     </header>
 
     <section id="welcome">
-        <header>
-            <img src="" alt="masoud">
-            <h2>welcome to Blog</h2>
+        <header class="myheader">
+
+            <h2>به دنیای من خوش آمدید</h2>
+            <img src="{% static 'blog/images/masoud_qashqai.jpg' %}" alt="masoud" class="myimg">
         </header>
-    <p> im masoud and i love chubby cats!</p>
+    <p> من مسعودم و عاشق دو چیزم کد (مخصوصا پایتون) و گربه های تپل </p>
     </section>
 
     <section id="latest-posts">
-        <h2>My Latest thoughts</h2>
+        <h2>آخرین افکار من</h2>
         <ul>
             <li>
                 <article class="post">
                     <a href="">
-                        <img src="" alt="donut cat">
+                        <img src="{% static 'blog/images/smalltiger.jpg' %}" alt="donut cat">
                     </a>
                     <div class="post__content">
                         <h3>پیشی عاشقتم</h3>
-                        <p>meow</p>
+                        <p>میو</p>
                     </div>
                 </article>
             </li>

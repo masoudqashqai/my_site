@@ -38,6 +38,7 @@
 }
 
 #welcome img {
+
   width: 10rem;
   height: 10rem;
   object-fit: cover;
@@ -50,15 +51,20 @@
 }
 
 #welcome h2 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   margin: 0 0 0 2rem;
   color: #e4e4e4;
-  width: 10rem;
+  /* width: 10rem; */
+  width:70%;
+  text-align: right;
+  padding-right: 1rem ;
+  margin-right: 1rem;
 }
 
 #welcome p {
   color: white;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 #latest-posts {
@@ -89,7 +95,7 @@
 #about {
   text-align: center;
   padding: 3rem;
-  background-color: #e48900;
+  background-color: #eeb108;
   margin-top: 5rem;
 }
 
@@ -144,4 +150,12 @@
 .post:hover time,
 .post:active time {
   color: white;
+}
+
+.myimg{
+
+}
+
+.myheader{
+
 }

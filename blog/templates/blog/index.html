@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+Blog
+{% endblock %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
+{% block page_content %}
+    <header>
+    <h1><a href="">Masouds Blog</a></h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="masoud">
+            <h2>welcome to Blog</h2>
+        </header>
+    <p> im masoud and i love chubby cats!</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest thoughts</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="donut cat">
+                    </a>
+                    <div class="post__content">
+                        <h3>پیشی عاشقتم</h3>
+                        <p>meow</p>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>what i do?</h2>
+        <p> i love programming , especially python and its framework django</p>
+        <p>i love a paying job as well!</p>
+    </section>
+{% endblock %}

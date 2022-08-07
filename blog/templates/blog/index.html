@@ -5,16 +5,11 @@
 Blog
 {% endblock %}
 {% block css_files %}
-<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
 {% endblock %}
 {% block page_content %}
-    <header id="main-navigation">
-    <nav>
-            <a href="">همه ی پست ها</a>
-        </nav>
-    <h1><a href="">وبلاگ مسعود</a></h1>
 
-    </header>
 
     <section id="welcome">
         <header class="myheader">
@@ -28,17 +23,7 @@ Blog
     <section id="latest-posts">
         <h2>آخرین افکار من</h2>
         <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src="{% static 'blog/images/smalltiger.jpg' %}" alt="donut cat">
-                    </a>
-                    <div class="post__content">
-                        <h3>پیشی عاشقتم</h3>
-                        <p>میو</p>
-                    </div>
-                </article>
-            </li>
+            {% include 'blog/includes/post.html' %}
         </ul>
     </section>
 

@@ -15,9 +15,9 @@
 <body>
 <header id="main-navigation">
     <nav>
-            <a href="">همه ی پست ها</a>
+            <a href="{% url 'posts-page' %}">همه ی پست ها</a>
         </nav>
-    <h1><a href="">وبلاگ مسعود</a></h1>
+    <h1><a href="{% url 'starting-page' %}">وبلاگ مسعود</a></h1>
 
 </header>
 {% block page_content %}

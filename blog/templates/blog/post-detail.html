@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+This Post
+{% endblock %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+{% endblock %}
+{% block page_content %}
+    <section id="summary">
+    <h2 class="post-title">تیتر پست</h2>
+        <article>
+
+                <img src="{% static 'blog/images/smalltiger.jpg' %}" alt="post-title">
+                <address>بوسیله مسعود</address>
+                <div>
+                    آخرین آپدیت :<time>July 10th</time>
+                </div>
+
+        </article>
+
+    </section>
+
+    <main>
+        <p>GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT
+            GARBAGE TEXT GARBAGE TEXT </p>
+        <p>GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT
+                GARBAGE TEXT GARBAGE TEXT </p>
+        <p>GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT
+                GARBAGE TEXT GARBAGE TEXT </p>
+        <p>GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT
+                GARBAGE TEXT GARBAGE TEXT </p>
+        <p>GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT
+                GARBAGE TEXT GARBAGE TEXT </p>
+    </main>
+{% endblock %}

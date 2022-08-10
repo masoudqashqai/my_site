@@ -2,20 +2,20 @@
 {% load static %}
 
 {% block page_title %}
-This Post
+{{ post.title }}
 {% endblock %}
 {% block css_files %}
     <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
 {% endblock %}
 {% block page_content %}
     <section id="summary">
-    <h2 class="post-title">تیتر پست</h2>
+    <h2 class="post-title">{{ post.title }}</h2>
         <article>
 
-                <img src="{% static 'blog/images/smalltiger.jpg' %}" alt="post-title">
-                <address>بوسیله مسعود</address>
+                <img src="{% static 'blog/images/'|add:post.image %}" alt="post-title">
+                <address>بوسیله {{ post.author }}</address>
                 <div>
-                    آخرین آپدیت :<time>July 10th</time>
+                    آخرین آپدیت :<time>{{  post.date|date:'d M Y' }}</time>
                 </div>
 
         </article>
@@ -23,15 +23,6 @@ This Post
     </section>
 
     <main>
-        <p>GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT
-            GARBAGE TEXT GARBAGE TEXT </p>
-        <p>GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT
-                GARBAGE TEXT GARBAGE TEXT </p>
-        <p>GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT
-                GARBAGE TEXT GARBAGE TEXT </p>
-        <p>GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT
-                GARBAGE TEXT GARBAGE TEXT </p>
-        <p>GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT GARBAGE TEXT
-                GARBAGE TEXT GARBAGE TEXT </p>
+        {{ post.content|linebreaks }}
     </main>
 {% endblock %}

@@ -12,7 +12,7 @@
     <h2 class="post-title">{{ post.title }}</h2>
         <article>
 
-                <img src="{% static 'blog/images/'|add:post.image %}" alt="post-title">
+                <img src="{% static 'blog/images/'|add:post.image %}" alt="{{ post.title }}">
                 <address>بوسیله {{ post.author }}</address>
                 <div>
                     آخرین آپدیت :<time>{{  post.date|date:'d M Y' }}</time>
